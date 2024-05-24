@@ -1,0 +1,15 @@
+version: "2"
+services:
+  rembg:
+    #    build:
+    #      context: .
+    #      dockerfile: Dockerfile
+    #    image: rembg:1.0.0
+    image: registry.cn-shenzhen.aliyuncs.com/luler/rembg
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1m"
+        max-file: "1"
+    ports:
+      - 5000:5000
